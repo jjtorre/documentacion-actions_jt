@@ -87,6 +87,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       
+      #CACHE AUTOMATICO
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
@@ -108,8 +109,19 @@ jobs:
 
 **Preguntas:**
 - ¿Cuánto tiempo se ahorra con el cache?
+-Se ahorra 12 segundos
 - ¿Qué pasa si cambias el `package.json`?
+-
 - ¿Cómo se relaciona esto con sistemas de archivos en SO?
+Sistemas de archivos
+
+Directorios
+
+Archivos
+
+Rutas absolutas y relativas
+
+Permisos
 
 ---
 
