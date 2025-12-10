@@ -19,6 +19,7 @@ jobs:
         with:
           node-version: '18'
           cache: 'npm'  # Caching automático de npm
+          cache-dependency-path: proyecto-demo/package-lock.json
       
       # O caching manual:
       - name: Cache node modules
