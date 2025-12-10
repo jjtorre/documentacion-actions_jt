@@ -93,14 +93,14 @@ jobs:
           node-version: '18'
           cache: 'npm'  # Caching automático de npm
       
-      # O caching manual:
-      - name: Cache node modules
-        uses: actions/cache@v3
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
+    #  # O caching manual:
+    #   - name: Cache node modules
+    #     uses: actions/cache@v3
+    #     with:
+    #       path: ~/.npm
+    #       key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+    #       restore-keys: |
+    #         ${{ runner.os }}-node-
       
       - run: npm install
       - run: npm test
