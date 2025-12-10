@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: so-cicd-app
+        working-directory: proyecto-demo
 
     steps:
       - uses: actions/checkout@v3
