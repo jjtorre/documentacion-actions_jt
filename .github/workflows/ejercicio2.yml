@@ -1,0 +1,27 @@
+jobs:
+  test-with-cache:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: proyecto-demo
+
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'npm'  # Caching automático de npm
+      
+      # O caching manual:
+      - name: Cache node modules
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      
+      - run: npm install
+      - run: npm test
