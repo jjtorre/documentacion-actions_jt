@@ -1,5 +1,5 @@
 
-name: Pipeline Completo
+name: Ejercicio 1 - Flujo Completo CI/CD
 
 on:
   push:

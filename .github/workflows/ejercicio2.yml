@@ -1,3 +1,9 @@
+name: Ejercicio 2 - Test con Caché
+
+on:
+  push:
+    branches: [ main, develop ]
+
 jobs:
   test-with-cache:
     runs-on: ubuntu-latest
